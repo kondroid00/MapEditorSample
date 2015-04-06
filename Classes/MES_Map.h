@@ -57,7 +57,7 @@ public:
     std::vector<NavGraphNode<> >& getNodes(){return m_Nodes;}
     std::vector<NavGraphEdge>& getEdges(){return m_Edges;}
     
-    std::size_t getNumNode(){return m_Nodes.size();}
+    std::size_t getNumNode()const{return m_Nodes.size();}
     
 };
 
