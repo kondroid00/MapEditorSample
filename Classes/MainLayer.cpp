@@ -17,7 +17,6 @@
 
 #include <chrono>
 
-
 using namespace cocos2d;
 
 
@@ -239,7 +238,6 @@ bool MainLayer::checkForCallingTrackCircle(Touch *pTouch)
     {
         return true;
     }
-    
     return false;
 }
 
@@ -253,7 +251,6 @@ bool MainLayer::checkForCallingMapGraphGenerator(Touch *pTouch)
     {
         return true;
     }
-    
     return false;
 }
 
@@ -269,6 +266,4 @@ bool MainLayer::checkForHolding()
     }
     return false;
 }
-
-
 

@@ -21,7 +21,6 @@
 
 namespace Utils
 {
-    
     //-------------------------- Constants ------------------------------
     //
     //  Various Constants
@@ -184,7 +183,6 @@ namespace Utils
     {
         return randFloat() - randFloat();
     }
-    
 }
 
 #endif

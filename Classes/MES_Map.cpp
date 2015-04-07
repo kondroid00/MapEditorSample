@@ -6,11 +6,11 @@
 //
 //
 
-#include <vector>
-
 #include "MES_Map.h"
 #include "Wall.h"
 #include "ObjectEnumerations.h"
+
+#include <vector>
 
 
 void MES_Map::clear()

@@ -133,7 +133,6 @@ public:
     
     State getState()const{return m_State;}
     void setState(State state){m_State = state;}
-    
 };
 
 #endif /* defined(__MapEditorSample__MainLayer__) */

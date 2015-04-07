@@ -16,7 +16,6 @@
 #define Sh cocos2d::Director::getInstance()->getWinSize().height
 #define CenterAnchor cocos2d::Vec2(0.5f, 0.5f)
 
-
 namespace Screen
 {
     enum

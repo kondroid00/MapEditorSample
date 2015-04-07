@@ -18,7 +18,6 @@
 #include <deque>
 
 using namespace cocos2d;
-using namespace Screen;
 
 
 void MapGraphGenerator::clear()
@@ -148,17 +147,17 @@ void MapGraphGenerator::checkCellOnWalls()
 }
 
 
-void MapGraphGenerator::calculate(MapCell *pSeed)
+void MapGraphGenerator::calculate(MapCell *pOriginCell)
 {
     //次に探索するセルを入れておくためのコンテナ
     std::vector<MapCell*> container;
 
     //起点のセルを有効化
-    pSeed->setAffective();
+    pOriginCell->setAffective();
     
     //現在のセルのXYの値を入れる
-    int currentX = pSeed->x;
-    int currentY = pSeed->y;
+    int currentX = pOriginCell->x;
+    int currentY = pOriginCell->y;
     
     //壁からの距離
     float distance;
@@ -182,7 +181,7 @@ void MapGraphGenerator::calculate(MapCell *pSeed)
             if(!pNextMapCell->isChecked())
             {
                 //現在のセルとネクストセルの間に壁がなければ処理
-                if(!WallIntersection::findClosestPointOfIntersectionWithWalls(pSeed->position,
+                if(!WallIntersection::findClosestPointOfIntersectionWithWalls(pOriginCell->position,
                                                                               pNextMapCell->position,
                                                                               distance,
                                                                               dummy,
@@ -253,9 +252,9 @@ void MapGraphGenerator::createNodeAndEdge()
                          {-1,  0},   //左
                          {-1,  1}};  //左上
     
-    for(std::size_t y = 0; y < m_MapCells.size(); ++y)
+    for(std::size_t x = 0; x < m_MapCells.size(); ++x)
     {
-        for(std::size_t x = 0; x < m_MapCells[x].size(); ++x)
+        for(std::size_t y = 0; y < m_MapCells[x].size(); ++y)
         {
             //現在のセル
             auto pMapCell = m_MapCells[x][y];
@@ -338,7 +337,7 @@ void MapGraphGenerator::createNodeAndEdge()
 
 
 //------------------------------------------------
-//      アニメーション付き
+//      アニメーション用
 //------------------------------------------------
 
 void MapGraphGenerator::update()
@@ -590,8 +589,4 @@ void MapGraphGenerator::drawEdge(MapCell *pCurrentCell, MapCell *pNextCell)
     
     m_pLayer->getRenderTexture()->end();
 }
-
-
-
-
 

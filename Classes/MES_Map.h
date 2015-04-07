@@ -58,7 +58,6 @@ public:
     std::vector<NavGraphEdge>& getEdges(){return m_Edges;}
     
     std::size_t getNumNode()const{return m_Nodes.size();}
-    
 };
 
 #endif /* defined(__MapEditorSample__MES_Map__) */

@@ -20,7 +20,6 @@
 
 namespace WallIntersection
 {
-    
     template<class T_walls>
     inline Wall* getClosestWall(const cocos2d::Vec2 &position,
                                 float &distance,

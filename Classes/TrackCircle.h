@@ -14,7 +14,6 @@
 
 class MainLayer;
 
-
 class TrackCircle : public cocos2d::Layer
 {
 private:
@@ -28,7 +27,6 @@ private:
     static const float SENSORD_MARGIN;
     static const float MAX_NODE_DISTANCE;
     static const float MIN_NODE_DISTANCE;
-    
     
 private:
     
@@ -121,6 +119,7 @@ public:
     
     void update(float dt);
     
+    //cocos2d::Layerのタッチメソッドをオーバライドしない
     bool onTouchBegan(cocos2d::Touch *pTouch);
     void onTouchMoved(cocos2d::Touch *pTouch);
     void onTouchEnded(cocos2d::Touch *pTouch);

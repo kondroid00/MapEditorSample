@@ -24,8 +24,7 @@ struct MapCell
 {
     int num;
     cocos2d::Vec2 position;
-    int x;
-    int y;
+    int x, y;
     
     //探索済みならtrue
     bool checked;
@@ -33,7 +32,7 @@ struct MapCell
     //有効なセルならtrue
     bool affective;
     
-    //隣接する有効なセル
+    //隣接する有効なセル（アニメーション用）
     std::vector<MapCell*> m_CellList;
     
 public:
@@ -71,7 +70,6 @@ private:
     
 private:
     
-    
     const std::vector<Wall*> &m_Walls;
     
     float m_NodeDistance;
@@ -87,7 +85,7 @@ private:
     
     void checkCellOnWalls();
     
-    void calculate(MapCell *pSeed);
+    void calculate(MapCell *pOriginCell);
     
     void createNodeAndEdge();
     
@@ -114,7 +112,7 @@ public:
     
     
 //------------------------------------------------
-//      アニメーション付き
+//      アニメーション用
 //------------------------------------------------
     
 private:
