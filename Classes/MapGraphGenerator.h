@@ -67,7 +67,7 @@ class MapGraphGenerator
 {
 private:
     
-    typedef std::vector<std::vector<MapCell*> > MapCellMap;
+    using MapCellMap = std::vector<std::vector<MapCell*> >;
     
 private:
     
