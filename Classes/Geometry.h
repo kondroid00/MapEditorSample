@@ -17,13 +17,6 @@
 
 namespace Geometry
 {
-    inline float getAngle(const cocos2d::Vec2 &A,
-                          const cocos2d::Vec2 &B)
-    {
-        
-    }
-    
-    
     inline float distToLineSegment(const cocos2d::Vec2 &A,
                                    const cocos2d::Vec2 &B,
                                    const cocos2d::Vec2 &P)

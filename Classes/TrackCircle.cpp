@@ -203,7 +203,6 @@ bool TrackCircle::onTouchBegan(Touch *pTouch)
                 changeCircleColor(Color4F(1.0f, 0.0f, 0.0f, 1.0f));
                 auto center = m_pCircle->getPosition() + this->getPosition();
                 m_FormerVecFromCenter = (pTouch->getLocation() - center);
-                
             }
             break;
             
@@ -223,7 +222,6 @@ void TrackCircle::onTouchMoved(Touch *pTouch)
     switch(m_pMainLayer->getState())
     {
         case MainLayer::State::track_circle:
-            
             break;
             
         case MainLayer::State::transition_to_track_circle:
@@ -245,7 +243,6 @@ void TrackCircle::onTouchMoved(Touch *pTouch)
             
         case MainLayer::State::using_circle:
             changeNodeDistance(pTouch);
-            
             break;
             
         default:
@@ -259,7 +256,6 @@ void TrackCircle::onTouchEnded(Touch *pTouch)
     switch(m_pMainLayer->getState())
     {
         case MainLayer::State::track_circle:
-            
             break;
             
         case MainLayer::State::transition_to_track_circle:

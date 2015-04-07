@@ -136,7 +136,6 @@ void MainLayer::update(float dt)
             break;
             
         case State::idling:
-            
             break;
             
         default:
@@ -184,12 +183,10 @@ void MainLayer::onTouchMoved(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)
         case State::transition_to_track_circle:
         case State::transition_to_map_graph_generator:
         case State::using_circle:
-            
             m_pTrackCircle->onTouchMoved(pTouch);
             break;
             
         case State::idling:
-            
             break;
             
         default:
@@ -208,13 +205,11 @@ void MainLayer::onTouchEnded(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)
             break;
             
         case State::track_circle:
-            
             break;
             
         case State::transition_to_track_circle:
         case State::transition_to_map_graph_generator:
         case State::using_circle:
-            
             m_pTrackCircle->onTouchEnded(pTouch);
             break;
             

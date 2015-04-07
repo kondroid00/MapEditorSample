@@ -52,8 +52,8 @@ namespace WallIntersection
     
     
     template<class T_walls>
-    inline bool isPointOnWalls(const cocos2d::Vec2 &point,
-                               const T_walls &walls)
+    inline bool pointLocatedOnWalls(const cocos2d::Vec2 &point,
+                                    const T_walls &walls)
     {
         for(typename T_walls::const_iterator currentWall = walls.begin();
             currentWall != walls.end();

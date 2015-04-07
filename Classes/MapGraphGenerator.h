@@ -96,8 +96,8 @@ private:
 public:
     
     MapGraphGenerator(const std::vector<Wall*> &walls,
-              std::vector<NavGraphNode<> > &nodes,
-              std::vector<NavGraphEdge> &edges)
+                      std::vector<NavGraphNode<> > &nodes,
+                      std::vector<NavGraphEdge> &edges)
     :m_Walls(walls)
     ,m_Nodes(nodes)
     ,m_Edges(edges)
@@ -196,7 +196,6 @@ public:
     bool isIdling()const{return m_State == State::idling;}
     bool isCreatingNode()const{return m_State == State::creating_node;}
     bool isCreatingEdge()const{return m_State == State::creating_edge;}
-    
 };
 
 #endif /* defined(__MapEditorSample__MapGraphGenerator__) */
