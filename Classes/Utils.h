@@ -167,7 +167,7 @@ namespace Utils
     //returns a random bool
     inline bool randBool()
     {
-        if(randFloat() > 0.5)
+        if(randFloat() > 0.5f)
         {
             return true;
         }
