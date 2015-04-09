@@ -74,9 +74,7 @@ namespace Geometry
     {
         auto NA = A.getNormalized();
         auto NB = B.getNormalized();
-        
         auto dot = NA.x * NB.x + NA.y * NB.y;
-        auto a = cosf(Utils::degreeToRadian(degree));
         
         if(dot > cosf(Utils::degreeToRadian(degree)))
         {
