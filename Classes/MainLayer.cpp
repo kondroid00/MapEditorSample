@@ -141,9 +141,9 @@ void MainLayer::update(float dt)
         default:
             break;
     }
-    log("%-33s %-52s %-40s",
-        m_pTrackCircle->showState().c_str(),
+    log("%-52s %-33s %-40s",
         this->showState().c_str(),
+        m_pTrackCircle->showState().c_str(),
         m_pMapGraphGenerator->showState().c_str());
 }
 

@@ -37,8 +37,6 @@ struct MapCell
     
 public:
     
-    MapCell(){}
-    
     MapCell(const cocos2d::Vec2 &position,
          int x,
          int y)
@@ -51,6 +49,9 @@ public:
     {
         m_CellList.reserve(8);
     }
+    
+    MapCell(const MapCell&) = delete;
+    MapCell& operator=(const MapCell&) = delete;
     
     void check(){checked = true;}
     void resetCheck(){checked = false;}

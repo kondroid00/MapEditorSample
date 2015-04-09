@@ -138,7 +138,7 @@ void MapGraphGenerator::checkCellOnWalls()
         for(auto pMapCell : cells)
         {
             if(WallIntersection::pointLocatedOnWalls(pMapCell->position,
-                                                m_Walls))
+                                                     m_Walls))
             {
                 pMapCell->check();
             }
