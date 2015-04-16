@@ -105,7 +105,7 @@ namespace Utils
     inline bool isEqual(float a, float b)
     {
         float diff = a - b;
-        return (diff < 1e-12) && (-diff < 1e-12);
+        return (diff < 1e-5) && (-diff < 1e-5);
     }
     
     
@@ -167,7 +167,7 @@ namespace Utils
     //returns a random bool
     inline bool randBool()
     {
-        if(randFloat() > 0.5f)
+        if(randFloat() > 0.5)
         {
             return true;
         }
